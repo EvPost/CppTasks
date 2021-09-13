@@ -1,24 +1,18 @@
 //
 //  main.cpp
-//  pr4
+//  HW1.16
 //
-//  Created by Air on 06.09.2021.
+//  Created by Air on 11.09.2021.
 //
 
 #include <iostream>
 #include <cmath>
-#include <stdio.h>
-int main(){
-    float m1, m2, r, f1, F;
- std::cout<<"m1=";
-    std::cin>>m1;
-    std::cout<<"m2=";
-       std::cin>>m2;
-    std::cout<<"r=";
-       std::cin>>r;
-    
-    f1=6.673*10e-12;
-    F=f1*m1*m2/(r*r);
-    printf ("F=%f(%f*%f)/%f=%f", f1,m1,m2,r,F);
-}
 
+
+int main() {
+    //float y1, y2, y3, y4, y5;
+    printf ("x   | 1  | 2  | 3  | 4  | 5  |\n");
+    printf ("----|----|----|----|----|----|\n");
+    printf ("F(x)|%1.2f|%1.2f|%1.2f|%1.2f|%1.2f|\n", sqrt(1), sqrt(2),sqrt(3), sqrt(4),sqrt(5));
+    return 0;
+}
