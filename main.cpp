@@ -1,24 +1,35 @@
 //
 //  main.cpp
-//  pr4
+//  CW1.07
 //
-//  Created by Air on 06.09.2021.
+//  Created by Air on 11.09.2021.
 //
 
 #include <iostream>
-#include <cmath>
 #include <stdio.h>
-int main(){
-    float m1, m2, r, f1, F;
- std::cout<<"m1=";
-    std::cin>>m1;
-    std::cout<<"m2=";
-       std::cin>>m2;
-    std::cout<<"r=";
-       std::cin>>r;
-    
-    f1=6.673*10e-12;
-    F=f1*m1*m2/(r*r);
-    printf ("F=%f(%f*%f)/%f=%f", f1,m1,m2,r,F);
-}
+#include <math.h>
 
+int main() {
+    double x;
+    scanf("%lf",&x);
+    int z1=(int)x;
+    if(x<0){
+        z1=z1-1;
+    }
+    printf("z1=%d\n",z1);
+    double fp=x-z1;
+    printf("fp=%lf\n",fp);
+    int z2 =int(x);
+    if(x>0){
+        if(fp>0)
+            z2=z2+1;
+    }
+    printf("z2=%d\n",z2);
+    int z3=z2-1;
+    printf("z3=%d\n",z3);
+    z1=floor(x);
+    z2=ceil(x);
+    z3=round(x);
+    fp=x-z1;
+    printf("[%lf]=%d, ]%lf[=%d, round=%d, fp=%lf\n",x,z1,x,z2,z3,fp);
+}
