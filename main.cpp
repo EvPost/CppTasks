@@ -1,24 +1,41 @@
 //
 //  main.cpp
-//  pr4
+//  HW3.08
 //
-//  Created by Air on 06.09.2021.
+//  Created by Air on 02.10.2021.
 //
 
 #include <iostream>
-#include <cmath>
-#include <stdio.h>
-int main(){
-    float m1, m2, r, f1, F;
- std::cout<<"m1=";
-    std::cin>>m1;
-    std::cout<<"m2=";
-       std::cin>>m2;
-    std::cout<<"r=";
-       std::cin>>r;
-    
-    f1=6.673*10e-12;
-    F=f1*m1*m2/(r*r);
-    printf ("F=%f(%f*%f)/%f=%f", f1,m1,m2,r,F);
-}
+#include <math.h>
+#include <limits.h>
 
+using namespace std;
+int main()
+{
+    uint32_t a1,b1;
+    printf("a\n");
+    scanf("%d",&a1);
+    printf("b\n");
+    scanf("%d",&b1);
+    if(a1 < abs(pow(2,32)-1 - b1))
+    {
+        printf("%d\n",a1+b1);
+    }
+    else
+    {
+        printf("переповнення\n");
+    }
+    int32_t a2,b2;
+    printf("a\n");
+    scanf("%d",&a2);
+    printf("b\n");
+    scanf("%d",&b2);
+    if( abs(a2) < (pow(2,32)-1)/abs(b2))
+    {
+        printf("%d\n",a2+b2);
+    }
+    else
+    {
+        printf("переповнення\n");
+    }
+}
